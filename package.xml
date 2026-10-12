@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format2.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>eigen_vendor</name>
+  <version>0.1.0</version>
+  <description>
+    Builds Eigen 3.4.0 (header-only linear algebra) cross-compiled for VxWorks
+    and installs its cmake config, so consumers (orocos_kdl_vendor, tf2_eigen,
+    ...) resolve find_package(Eigen3) / eigen3_cmake_module. Matches the harness
+    pkg/eigen 3PP and Ubuntu 26.04 libeigen3-dev (3.4.0).
+  </description>
+  <maintainer email="Andrei.Kholodnyi@gmail.com">Andrei Kholodnyi</maintainer>
+  <license>Apache License 2.0</license> <!-- the contents of this package are Apache 2.0 -->
+  <license>MPL-2.0</license>            <!-- Eigen is primarily MPL-2.0 -->
+
+  <url type="repository">https://gitlab.com/libeigen/eigen</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>
+
+  <depend>libeigen3-dev</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
